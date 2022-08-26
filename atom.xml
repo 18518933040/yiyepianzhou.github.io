@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://kangyk.yang.github.blog/yiyepianzhou.github.io/</id>
+    <title>一叶扁舟</title>
+    <updated>2022-08-26T15:31:22.825Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://kangyk.yang.github.blog/yiyepianzhou.github.io/"/>
+    <link rel="self" href="http://kangyk.yang.github.blog/yiyepianzhou.github.io/atom.xml"/>
+    <subtitle>定期总结，不断成长。</subtitle>
+    <logo>http://kangyk.yang.github.blog/yiyepianzhou.github.io/images/avatar.png</logo>
+    <icon>http://kangyk.yang.github.blog/yiyepianzhou.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 一叶扁舟</rights>
+    <entry>
+        <title type="html"><![CDATA[2. 领域驱动的通用语言]]></title>
+        <id>http://kangyk.yang.github.blog/yiyepianzhou.github.io/DDD_2/</id>
+        <link href="http://kangyk.yang.github.blog/yiyepianzhou.github.io/DDD_2/">
+        </link>
+        <updated>2022-08-24T16:41:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>沟通是高效开发的基石，高效沟通更是重中之重！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>沟通是高效开发的基石，高效沟通更是重中之重！</p>
+<!-- more -->
+<h3 id="无通用语言的缺点">无通用语言的缺点</h3>
+<ul>
+<li>如果语言支离破碎，项目必将遭遇严重问题</li>
+<li>讲话和写东西使用的语言不一致，将会导致对于领域的深刻理解根本无法记录到代码或者文档中</li>
+<li>翻译使得沟通不畅，并且削弱了知识消化</li>
+</ul>
+<h3 id="有了通用语言之后的优点">有了通用语言之后的优点</h3>
+<ul>
+<li>将模型作为语言的支柱，确保内部的所有交流中坚持使用这种语言。</li>
+<li>对通用语言的修改就是对模型的修改。</li>
+<li>领域专家应该抵制不适合或者无法充分表达领域理解的术语或者结构。</li>
+<li>讨论系统时要结合模型，画图的时候也要结合模型。</li>
+</ul>
+<h2 id="文档和图">文档和图</h2>
+<ul>
+<li>设计的重要细节应该在代码中体现出来</li>
+<li>切记，模型不是图，图只是用来表达和解释模型的。</li>
+<li><strong>文档应该作为代码和口头交流的补充</strong></li>
+<li>文档应当鲜活并保证最新</li>
+<li>编码时需要一丝不苟的态度，只有这样才能编写出 “言行全部正确的代码”</li>
+<li>对于不同层次的人，可以使用解释性的模型</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1. 如何进行领域驱动设计]]></title>
+        <id>http://kangyk.yang.github.blog/yiyepianzhou.github.io/DDD_1/</id>
+        <link href="http://kangyk.yang.github.blog/yiyepianzhou.github.io/DDD_1/">
+        </link>
+        <updated>2022-08-24T16:31:40.000Z</updated>
+        <content type="html"><![CDATA[<p>名人名言George box：</p>
+<ol>
+<li>从一个可以开始工作的模型开始，不要想太多。</li>
+<li>服务要做到自治，并根据自己的数据做出决定。不需要不停地向其他上下文查询。</li>
+</ol>
+<p>首先我们挑出这3个词的重要性： 设计，领域，驱动。</p>
+<p>任何设计出来的系统，需要优先保证目标可实现，可监控，可运维。<br>
+领域驱动 是为了在未来需求变化的时候，能够在指定的范围，花费不多的资源，就可以实现目标 这个目标而提出的一个方法。接下来的一切事情都是为了这个目标而服务的。</p>
+<p>第一步：业务知识消化，与专家一起共同理解业务。<br>
+第二步：与专家定义通用语言，方便在后续的会议中，清晰准确的表达。<br>
+第三步：认识 文档和图的重要性（切记，模型不是图，图只是用来表达和解释模型的）。文档一定要及时更新</p>
+<p>以上三点，适用于任何形式的设计。接下来我们再来聊聊 针对具体业务，应该如何使用领域驱动 让系统适应未来的变化。</p>
+<p>声明：<strong>案例 不会透漏公司，部门，项目等信息。</strong></p>
+<p>2020年，对于任何企业都是不平凡的一年，对于我所在的旅游行业更是面临前所未有的挑战，但是对于我们技术而言，这一年可以更好的进行技术转型，影响的业务更少。转型的目标是 以更少的人力负责支持更多的业务。所以 我们采用领域驱动设计并且以中台为目标 来重构我们的系统，使其 能接入更多业务场景。</p>
+<p>第一步：基于现有业务划分领域，确定依赖方式，避免出现系统循环依赖<br>
+核心域：订单域，产品域。<br>
+支撑域：保险域，支付域。<br>
+通用域：登陆域<br>
+第二步：根据对应领域识别聚合根，例如：订单域的聚合根就是订单，产品域的聚合根就是 SPU。<br>
+第三步：根据现有case，不断打磨聚合根（注意会议记录和各个版本的文档记录）。使其既能支持现有逻辑，也要有扩展性。在这里面可以适当使用动态数据类型（Map），但是也会带来使用者使用不便的问题（各种判空，可以采用JsonSchema校验这种类型是否符合规则）。<br>
+第四步：区分领域服务和领域聚合根本身功能。（领域服务需要调用多个聚合根）<br>
+第五步：与其他领域确定调用方式以及详细api</p>
+]]></content>
+    </entry>
+</feed>
